@@ -1,8 +1,17 @@
 .home-banner{
-    background-image: url("https://images.pexels.com/photos/580679/pexels-photo-580679.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-image: url(../images/pics/girl-laying.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 600px;
+}
+
+.blogs-banner{
+    background-image: url(../images/pics/toys.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 400px;
 }

@@ -58,8 +58,8 @@
         </div>
     </div>
     <hr>
-    <div class="container">
-        <small>Copyright <span class="fw-bold">{{ config('app.name', 'DaryBlogs') }}</span></small>
+    <div class="container d-flex justify-content-between">
+        <small>©Copyright {{ date('Y') }} {{ config('app.name') }}.</small>
+        <small>All Rights Reserved</small>
     </div>
-    <div class="py-5"></div>
 </div>

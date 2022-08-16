@@ -1,9 +1,12 @@
 @extends('layouts.app')
 @section('content')
-    <div>
-        <div class="container">
+    <div class="blogs-banner">
+        <div class="container text-white">
             <div class="text-center text-uppercase">
-                <h1>Blog Posts</h1>
+                <h1 class="py-5">Blog Posts</h1>
+                <p>
+                    Easily get posts by your favorite writers
+                </p>
             </div>
         </div>
     </div>
@@ -28,27 +31,38 @@
         <div class="container">
             <div class="row">
                 @foreach($posts as $post)
-                <div class="col-sm-6">
-                    <h2 class="mb-3">{{ $post->title }}</h2>
-                    <small class="mb-5">By <strong class="">{{ $post->user->name }}</strong>,on {{ date('jS M Y', strtotime($post->updated_at)) }}</small>
-                    <p>
-                        {{ $post->description }}
-                    </p>
-                    <a href="/blog/{{ $post->slug }}" class="btn btn-primary text-white nav-link">Read more</a>
-                    @if(isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
-                        <a href="/blog/{{ $post->slug }}/edit" class="btn btn-primary">
-                            Edit
-                        </a>
-                    @endif
-                    <div>
-                        <form action="/blog/{{ $post->slug }}" method="POST">
-                            @csrf
-                            @method('delete')
+                <div class="col-sm-6 mb-5">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h3 class="mb-4 text-capitalize">{{ $post->title }}</h3>
+                            <p class="line-limit text-muted mb-4">
+                                {{ $post->description }}
+                            </p>
+                            <div class="mb-4 text-muted d-flex justify-content-between">
+                                <small class="text-capitalize">~{{ $post->user->name }}</small>
+                                <small>{{ date('jS M Y', strtotime($post->updated_at)) }}</small>
+                            </div>
+                            <a href="/blog/{{ $post->slug }}" class="btn btn-primary text-white nav-link">Read more</a>
+                            @if(isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
+                                <div class="d-flex">
+                                    <div>
+                                        <a href="/blog/{{ $post->slug }}/edit" class="btn btn-primary">
+                                            Edit
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <form action="/blog/{{ $post->slug }}" method="POST">
+                                            @csrf
+                                            @method('delete')
 
-                            <button class="btn btn-danger">
-                                Delete
-                            </button>
-                        </form>
+                                            <button class="btn btn-danger">
+                                                Delete
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            @endif
+                        </div>
                     </div>
                 </div>
                 @endforeach

@@ -3,9 +3,11 @@
 @section('content')
     <div class="home-banner">
         <div class="container">
-            <div class="text-white text-center">
-                <h1 class="display-4 py-5">Do you want to become a developer</h1>
-                <a href="/blog" class="h2 nav-link py-5">Read more</a>
+            <div class="text-indigo text-center">
+                <h1 class="display-4 py-5">Become a renowned blogger</h1>
+                <button class="btn btn-indigo align-self-center px-5">
+                    <a href="/blog" class="nav-link text-white">Blogs</a>
+                </button>
             </div>
         </div>
     </div>
@@ -15,9 +17,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="https://cdn.pixabay.com/photo/2018/01/24/17/33/light-bulb-3104355__340.jpg" alt="..." class="img-fluid">
+                    <img src="https://cdn.pixabay.com/photo/2018/01/24/17/33/light-bulb-3104355__340.jpg" alt="..." class="img-fluid rounded-4">
                 </div>
                 <div class="col-sm-6 align-self-center">
+                    <h2>Hello world</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequatur dolorum fugit nemo, qui similique?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eaque fugiat labore recusandae. Eaque modi officia quis saepe similique veniam?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-5"></div>
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 order-2">
+                    <img src="https://cdn.pixabay.com/photo/2018/01/24/17/33/light-bulb-3104355__340.jpg" alt="..." class="img-fluid rounded-4">
+                </div>
+                <div class="col-sm-6 align-self-center order-1">
                     <h2>Hello world</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequatur dolorum fugit nemo, qui similique?
@@ -50,7 +72,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="card shadow border-0">
+                    <div class="card shadow">
                         <div class="card-body">
                             <h4 class="py-3">The growth of this market</h4>
                             <p class="text-muted mb-5">
@@ -62,7 +84,7 @@
                 </div>
 
                 <div class="col-sm-6">
-                    <div class="card shadow border-0">
+                    <div class="card shadow">
                         <div class="card-body">
                             <h4 class="py-3">Makadara express</h4>
                             <p class="text-muted mb-5">
