@@ -3,6 +3,7 @@
     <div>
         <div class="container">
             <div class="text-center text-uppercase">
+                <small>article</small>
                 <h2>{{ $post->title }}</h2>
             </div>
         </div>
