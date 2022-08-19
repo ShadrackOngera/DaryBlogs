@@ -56,7 +56,7 @@
     <div class="bg-dark text-white">
         <div class="py-3"></div>
         <div class="container text-center">
-            <h6>I'm an Expert in...</h6>
+            <h6>Become an Expert in...</h6>
             <h4>psychology</h4>
             <h4>Frontend</h4>
             <h4>fullstack</h4>
@@ -71,7 +71,7 @@
                 <h3>Recent Blogs</h3>
             </div>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6 mb-3">
                     <div class="card shadow">
                         <div class="card-body">
                             <h4 class="py-3">The growth of this market</h4>
@@ -86,7 +86,7 @@
                 <div class="col-sm-6">
                     <div class="card shadow">
                         <div class="card-body">
-                            <h4 class="py-3">Makadara express</h4>
+                            <h4 class="py-3">Madaraka express</h4>
                             <p class="text-muted mb-5">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut delectus iste minima voluptatem? Adipisci asperiores commodi debitis deleniti facere impedit, iste nesciunt numquam odit pariatur, placeat quos sunt ullam!
                             </p>
