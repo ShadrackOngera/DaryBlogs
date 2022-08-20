@@ -11,9 +11,11 @@
     <div class="container">
         <small class="mb-5">By <strong class="">{{ $post->user->name }}</strong>,on {{ date('jS M Y', strtotime($post->updated_at)) }}</small>
         <hr>
-        <pre class="mb-3">
-            {{ $post->description }}
-        </pre>
+        <div class="mb-5">
+            <p>
+                {!! nl2br(e($post->description)) !!}
+            </p>
+        </div>
         <div class="d-grid gap-2 col-6 mx-auto">
             <a href="/blog" class="btn btn-info text-white">Back</a>
         </div>

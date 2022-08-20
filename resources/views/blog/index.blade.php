@@ -37,16 +37,18 @@
                 @foreach($posts as $post)
                 <div class="col-sm-6 mb-5">
                     <div class="card shadow h-100">
-                        <div class="card-body position-relative">
-                            <h3 class="mb-4 text-capitalize">{{ $post->title }}</h3>
-                            <p class="line-limit text-muted mb-4">
-                                {{ $post->description }}
-                            </p>
-                            <div class="mb-4 text-muted d-flex justify-content-between">
-                                <small class="text-capitalize">~{{ $post->user->name }}</small>
-                                <small>{{ date('jS M Y', strtotime($post->updated_at)) }}</small>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="mb-4 text-capitalize">{{ $post->title }}</h3>
+                                <p class="line-limit text-muted mb-4">
+                                    {{ $post->description }}
+                                </p>
                             </div>
-                            <div class="">
+                            <div class="align-bottom">
+                                <div class="mb-3 text-muted d-flex justify-content-between">
+                                    <small class="text-capitalize">~{{ $post->user->name }}</small>
+                                    <small>{{ date('jS M Y', strtotime($post->updated_at)) }}</small>
+                                </div>
                                 <a href="/blog/{{ $post->slug }}" class="btn btn-primary text-white nav-link mb-3">Read more</a>
                                 @if(isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
                                     <div class="row">

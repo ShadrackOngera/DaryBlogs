@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <pre>
+                        Jokes on you. I no longer use this page
+                    </pre>
                 </div>
             </div>
         </div>
