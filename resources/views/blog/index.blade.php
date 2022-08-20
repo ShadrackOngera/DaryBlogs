@@ -52,7 +52,7 @@
                                 <a href="/blog/{{ $post->slug }}" class="btn btn-primary text-white nav-link mb-3">Read more</a>
                                 @if(isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-6 mb-3">
                                             <div class="d-grid gap-2">
                                                 <a href="/blog/{{ $post->slug }}/edit" class="btn btn-primary text-white">
                                                     Edit

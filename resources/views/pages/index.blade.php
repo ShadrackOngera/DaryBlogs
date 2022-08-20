@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="https://cdn.pixabay.com/photo/2018/01/24/17/33/light-bulb-3104355__340.jpg" alt="..." class="img-fluid rounded-4">
+                    <img src="https://cdn.pixabay.com/photo/2014/06/05/22/27/minions-363019__340.jpg" alt="..." class="img-fluid rounded-2 mb-4">
                 </div>
                 <div class="col-sm-6 align-self-center">
                     <h2>Defination</h2>
@@ -50,7 +50,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 order-2">
-                    <img src="https://cdn.pixabay.com/photo/2018/01/24/17/33/light-bulb-3104355__340.jpg" alt="..." class="img-fluid rounded-4">
+                    <img src="https://cdn.pixabay.com/photo/2018/01/24/17/33/light-bulb-3104355__340.jpg" alt="..." class="img-fluid rounded-2">
                 </div>
                 <div class="col-sm-6 align-self-center order-1">
                     <h2>Daryblogs</h2>
@@ -80,17 +80,27 @@
     <div>
         <div class="container">
             <div class="text-center text-muted text-uppercase mb-5">
-                <h3>Recent Blogs</h3>
+                <h3>Randoms</h3>
             </div>
             <div class="row">
                 <div class="col-sm-6 mb-3">
                     <div class="card shadow">
                         <div class="card-body">
-                            <h4 class="py-3">The growth of this market</h4>
-                            <p class="text-muted mb-5">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut delectus iste minima voluptatem? Adipisci asperiores commodi debitis deleniti facere impedit, iste nesciunt numquam odit pariatur, placeat quos sunt ullam!
-                            </p>
-                            <small class="text-muted">Naomi Shabaan</small>
+                            <div>
+                                <h4 class="py-3">I Have A Dream</h4>
+                                <p class="text-muted">
+                                    I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.
+                                </p>
+                                <p class="text-muted">
+                                    Five score years ago, a great American, in whose symbolic shadow we stand today, signed the Emancipation Proclamation. This momentous decree came as a great beacon light of hope to millions of Negro slaves who had been seared in the flames of withering injustice. It came as a joyous daybreak to end the long night of their captivity....
+                                </p>
+                            </div>
+                            <div class="py-4"></div>
+                            <div class="py-3"></div>
+                            <div class="d-flex justify-content-between bottom-0">
+                                <small class="text-muted">~Martin Luther King</small>
+                                <small class="text-muted">1963</small>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,11 +108,22 @@
                 <div class="col-sm-6">
                     <div class="card shadow">
                         <div class="card-body">
-                            <h4 class="py-3">Madaraka express</h4>
-                            <p class="text-muted mb-5">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut delectus iste minima voluptatem? Adipisci asperiores commodi debitis deleniti facere impedit, iste nesciunt numquam odit pariatur, placeat quos sunt ullam!
+                            <h4 class="py-3">“Spanish Armada” Speech to the Troops at Tilbury</h4>
+                            <p class="text-muted">
+                                I am come amongst you, as you see, at this time, not for my recreation and disport, but being resolved, in the midst
+                                and heat of the battle, to live and die amongst you all; to lay down for my God, and for my kingdom, and my people,
+                                my honour and my blood, even in the dust.
                             </p>
-                            <small class="text-muted">Naomi Shabaan</small>
+                            <p class="text-muted">
+                                I know I have the body but of a weak and feeble woman, but I have the heart and
+                                stomach of a king, and of a king of England too, and think foul scorn that Parma or Spain, or any prince of Europe,
+                                should dare to invade the borders of my realm: To which rather than any dishonour shall grow by me, I myself will take
+                                up arms, I myself will be your general, judge, and rewarder of every one of your virtues in the field.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <small class="text-muted">~Queen Elizabeth I</small>
+                                <small class="text-muted">1588</small>
+                            </div>
                         </div>
                     </div>
                 </div>
