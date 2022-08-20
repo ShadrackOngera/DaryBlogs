@@ -6,6 +6,7 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 
 class PostsController extends Controller
 {
@@ -52,12 +53,14 @@ class PostsController extends Controller
 
 //        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
 
-        Post::create([
+        $post = Post::create([
             'title' => $request->input('title'),
             'description' => $request->input('description'),
             'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
             'user_id' => auth()->user()->id
         ]);
+
+        Notification::route('telegram', '5560228011')->notify(new \App\Notifications\NewBlogNotification($post));
 
         return redirect('/blog')->with('message', 'Your Post has been added');
     }

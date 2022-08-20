@@ -6,8 +6,21 @@
             <div class="text-indigo text-center">
                 <h1 class="display-4 py-5">Become a renowned blogger</h1>
                 <button class="btn btn-indigo align-self-center px-5">
-                    <a href="/blog" class="nav-link text-white">Blogs</a>
+                    <a href="/blog" class="nav-link text-white">View Blogs</a>
                 </button>
+                @if(Auth::check())
+                    <div>
+                        <div class="container mb-3 align-self-center">
+                            <div class="position-relative py-5">
+                                <div class="position-absolute top-50 start-50 translate-middle col-sm-4">
+                                    <a href="/blog/create" class="nav-link create-home text-indigo w-100 py-1">
+                                        CREATE POST
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
@@ -20,12 +33,12 @@
                     <img src="https://cdn.pixabay.com/photo/2018/01/24/17/33/light-bulb-3104355__340.jpg" alt="..." class="img-fluid rounded-4">
                 </div>
                 <div class="col-sm-6 align-self-center">
-                    <h2>Hello world</h2>
+                    <h2>Defination</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequatur dolorum fugit nemo, qui similique?
+                        A blog (a shortened version of “weblog”) is an online journal or informational website displaying information in reverse chronological order, with the latest posts appearing first, at the top.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eaque fugiat labore recusandae. Eaque modi officia quis saepe similique veniam?
+                        It is a platform where a writer or a group of writers share their views on an individual subject.
                     </p>
                 </div>
             </div>
@@ -40,12 +53,11 @@
                     <img src="https://cdn.pixabay.com/photo/2018/01/24/17/33/light-bulb-3104355__340.jpg" alt="..." class="img-fluid rounded-4">
                 </div>
                 <div class="col-sm-6 align-self-center order-1">
-                    <h2>Hello world</h2>
+                    <h2>Daryblogs</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequatur dolorum fugit nemo, qui similique?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eaque fugiat labore recusandae. Eaque modi officia quis saepe similique veniam?
+                        Science, crime, medicine, archaeology, nature — if it’s interesting news, you’ll find it here. Stories like these may not always be
+                        the ones atop your news feed, but chances are they’re the ones you’ll actually want to read. Whether it’s stories of weird animals,
+                        grisly crimes, interstellar drama, or the just plain unbelievable, these are the most interesting articles.
                     </p>
                 </div>
             </div>

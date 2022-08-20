@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [\App\Http\Controllers\PagesController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\PagesController::class, 'index'])->name('home');
+Route::get('/contact-us', [\App\Http\Controllers\PagesController::class, 'contactPage'])->name('contact');
+
+
 Route::resource('/blog', \App\Http\Controllers\PostsController::class);
 
 Auth::routes();
