@@ -14,14 +14,16 @@
                 <input type="text" class="form-control" id="floatingInput" name="title" placeholder="Title">
                 <label for="floatingInput">Title</label>
             </div>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Description" name="description" id="floatingTextarea2" style="height: 100px"></textarea>
+            <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Description" name="description" id="floatingTextarea2" style="height: 200px"></textarea>
                 <label for="floatingTextarea2">Description</label>
             </div>
-            <button type="submit" class="btn btn-success">
-                Submit
-            </button>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success text-white">
+                    Submit
+                </button>
+            </div>
         </form>
     </div>
-    <div></div>
+    <div class="py-5"></div>
 @endsection

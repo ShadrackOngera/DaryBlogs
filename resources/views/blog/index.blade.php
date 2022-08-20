@@ -42,22 +42,26 @@
                                 <small class="text-capitalize">~{{ $post->user->name }}</small>
                                 <small>{{ date('jS M Y', strtotime($post->updated_at)) }}</small>
                             </div>
-                            <a href="/blog/{{ $post->slug }}" class="btn btn-primary text-white nav-link">Read more</a>
+                            <a href="/blog/{{ $post->slug }}" class="btn btn-primary text-white nav-link mb-3">Read more</a>
                             @if(isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
-                                <div class="d-flex">
-                                    <div>
-                                        <a href="/blog/{{ $post->slug }}/edit" class="btn btn-primary">
-                                            Edit
-                                        </a>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="d-grid gap-2">
+                                            <a href="/blog/{{ $post->slug }}/edit" class="btn btn-primary text-white">
+                                                Edit
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div>
+                                    <div class="col-sm-6">
                                         <form action="/blog/{{ $post->slug }}" method="POST">
                                             @csrf
                                             @method('delete')
 
-                                            <button class="btn btn-danger">
-                                                Delete
-                                            </button>
+                                            <div class="d-grid gap-2">
+                                                <button class="btn btn-danger">
+                                                    Delete
+                                                </button>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
