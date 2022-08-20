@@ -57,9 +57,9 @@
         <div class="py-3"></div>
         <div class="container text-center">
             <h6>Become an Expert in...</h6>
-            <h4>psychology</h4>
-            <h4>Frontend</h4>
-            <h4>fullstack</h4>
+            <h4>Blogging</h4>
+            <h4>Story telling</h4>
+            <h4>Creative Writing</h4>
         </div>
         <div class="py-3"></div>
     </div>
