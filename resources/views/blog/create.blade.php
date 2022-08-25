@@ -25,7 +25,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <a href="/blog" class="btn btn-primary text-white w-100">View Blogs</a>
+                    <a href="/blog" class="btn btn-primary text-white w-100">Back</a>
                 </div>
                 <div class="col-sm-6">
                     <a href="/" class="btn btn-info text-white w-100">Home Page</a>

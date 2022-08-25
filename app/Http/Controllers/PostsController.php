@@ -25,7 +25,7 @@ class PostsController extends Controller
 //        $post = Post::all();
 
         return view('blog.index')
-            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+            ->with('posts', Post::orderBy('updated_at', 'DESC')->paginate(8));
     }
 
     /**
@@ -117,7 +117,7 @@ class PostsController extends Controller
      */
     public function destroy($slug)
     {
-        $post = Post::where('slug', $slug);
+        $post = Post::where('slug', $slug)->delete();
 
         return redirect('/blog')->with('message', 'Your Post has been Deleted');
     }

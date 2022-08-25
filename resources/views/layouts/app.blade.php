@@ -16,6 +16,7 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <script type="text/javascript" src="{{ URL::asset('js/custom.js') }}"></script>
 
 
 
@@ -26,7 +27,6 @@
         <div>
             @include('partials.nav')
         </div>
-
         <main class="py-4">
             @yield('content')
         </main>

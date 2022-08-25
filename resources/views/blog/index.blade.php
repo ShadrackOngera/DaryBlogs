@@ -12,7 +12,7 @@
     </div>
     <div class="py-2"></div>
     @if(session()->has('message'))
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success position-absolute top-0 start-50 translate-middle-x w-75 mt-5 text-center" role="alert">
             {{ session()->get('message') }}
         </div>
     @endif
@@ -44,10 +44,14 @@
                                     {{ $post->description }}
                                 </p>
                             </div>
-                            <div class="align-bottom">
-                                <div class="mb-3 text-muted d-flex justify-content-between">
+                            <div class="">
+                                <div class="text-muted d-flex justify-content-between align-items-center mb-3">
                                     <small class="text-capitalize">~{{ $post->user->name }}</small>
                                     <small>{{ date('jS M Y', strtotime($post->updated_at)) }}</small>
+                                    <button class="btn btn-outline-secondary">
+                                        <small class="me-2">Like</small>
+                                        <span class="badge text-bg-secondary"> 4</span>
+                                    </button>
                                 </div>
                                 <a href="/blog/{{ $post->slug }}" class="btn btn-primary text-white nav-link mb-3">Read more</a>
                                 @if(isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
@@ -78,6 +82,9 @@
                     </div>
                 </div>
                 @endforeach
+            </div>
+            <div class="d-flex justify-content-center">
+                {!! $posts->links() !!}
             </div>
         </div>
     </div>
