@@ -48,11 +48,30 @@
                                 <div class="text-muted d-flex justify-content-between align-items-center mb-3">
                                     <small class="text-capitalize">~{{ $post->user->name }}</small>
                                     <small>{{ date('jS M Y', strtotime($post->updated_at)) }}</small>
-                                    <button class="btn btn-outline-secondary">
-                                        <small class="me-2">Like</small>
-                                        <span class="badge text-bg-secondary"> 4</span>
-                                    </button>
+                                    <div class="d-flex align-items-center">
+                                        <div class="">
+                                            @if($post->liked())
+                                                    <form action="{{ route('unlike.post', $post->id) }}"
+                                                          method="post">
+                                                        @csrf
+                                                        <button class="{{ $post->liked() ? 'block' : 'hidden'  }} btn btn-outline-secondary text-orange me-2 ">
+                                                            unlike
+                                                        </button>
+                                                    </form>
+                                            @else
+                                                    <form action="{{ route('like.post', $post->id) }}"
+                                                          method="post">
+                                                        @csrf
+                                                        <button class="{{ $post->liked() ? 'bg-blue-600' : '' }} btn btn-outline-secondary text-orange me-2">
+                                                            like
+                                                        </button>
+                                                    </form>
+                                            @endif
+                                        </div>
+                                        <span class="badge text-bg-secondary">{{ $post->likeCount }}</span>
+                                    </div>
                                 </div>
+
                                 <a href="/blog/{{ $post->slug }}" class="btn btn-primary text-white nav-link mb-3">Read more</a>
                                 @if(isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
                                     <div class="row">

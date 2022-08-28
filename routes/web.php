@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\PagesController::class, 'index'])->name('home');
 Route::get('/contact-us', [\App\Http\Controllers\PagesController::class, 'contactPage'])->name('contact');
 
+//like and unlike routes
+Route::get('/post-list',[\App\Http\Controllers\PostsController::class,'postList'])->name('post.list');
+Route::post('/like-post/{id}',[\App\Http\Controllers\PostsController::class,'likePost'])->name('like.post');
+Route::post('/unlike-post/{id}',[\App\Http\Controllers\PostsController::class,'unlikePost'])->name('unlike.post');
 
 Route::resource('/blog', \App\Http\Controllers\PostsController::class);
 

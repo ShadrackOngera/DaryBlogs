@@ -121,4 +121,23 @@ class PostsController extends Controller
 
         return redirect('/blog')->with('message', 'Your Post has been Deleted');
     }
+
+    //like and unlike feature
+    public function likePost($id)
+    {
+        $post = Post::find($id);
+        $post->like();
+        $post->save();
+
+        return redirect('/blog');
+    }
+
+    public function unlikePost($id)
+    {
+        $post = Post::find($id);
+        $post->unlike();
+        $post->save();
+
+        return redirect('/blog');
+    }
 }
