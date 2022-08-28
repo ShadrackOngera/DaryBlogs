@@ -24,7 +24,7 @@
                 <h4>Socials</h4>
                 <ul class="navbar-nav text-muted">
                     <li class="nav-item">
-                        <a href="t.me/Daryblogs" class="nav-link">Telegram</a>
+                        <a href="https://t.me/daryblogs" class="nav-link">Telegram</a>
                     </li>
                     <li class="nav-item">
                         <a href="Twitter.com/shadrack2ongera" class="nav-link">Twitter</a>
