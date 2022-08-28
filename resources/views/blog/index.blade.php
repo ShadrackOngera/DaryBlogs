@@ -5,7 +5,7 @@
             <div class="text-center text-uppercase">
                 <h1 class="py-5">Blog Posts</h1>
                 <p>
-                    Easily get posts by your favorite writers
+                    | Easily get posts by your favorite writers |
                 </p>
             </div>
         </div>
